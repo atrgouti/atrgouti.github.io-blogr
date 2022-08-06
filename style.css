@@ -178,12 +178,16 @@ nav .nav-content{
         right: 0;
         height: 90vh;
         top: 10vh;
-        background-color: orangered;
+        background-color:  hsl(13, 100%, 72%);
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         font-size: 2rem;
+    }
+    .lists img{
+        position: absolute;
+        right: -24px;
     }
     .links-wraper ul li{
         margin: 5rem;
@@ -195,13 +199,25 @@ nav .nav-content{
         position: absolute;
         top: 0;
         background-color: aliceblue;
-        height: fit-content;
     }
     .humbergr-menu{
         display: block;
         position: absolute;
         right: 5%;
     }
+    .sub-menu-1{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: hsl(0, 0%, 100%);
+        width: 95%;
+        border-radius: 5px;
+        box-shadow: hsl(0, 0%, 0%, .1) 10px 10px ;
+    }
+    .logo-links ul li.active .sub-menu-1{
+        margin-top: 10px;
+    }
+
 }
 
 
