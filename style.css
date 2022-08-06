@@ -17,6 +17,9 @@ body{
     font-family: Overpass;
     overflow-x: hidden;
 }
+.overflow{
+    overflow-x: hidden;
+}
 nav{
     background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     height: 100vh;
@@ -115,6 +118,9 @@ ul img{
 .humbergr-menu{
     display: none;
 }
+.close-icon{
+    display: none;
+}
 
 .links-wraper{
     z-index: 1;
@@ -178,12 +184,14 @@ nav .nav-content{
         right: 0;
         height: 90vh;
         top: 10vh;
-        background-color:  hsl(13, 100%, 72%);
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         font-size: 2rem;
+        transform: translateX(100%);
+        transition: 0.3s ease-in;
     }
     .lists img{
         position: absolute;
@@ -205,28 +213,44 @@ nav .nav-content{
         position: absolute;
         right: 5%;
     }
-    .sub-menu-1{
+    .logo-links ul li.active .sub-menu-1 ul{
+        height: 200px;
+        border-radius: 20px;
+    }
+    .links-wraper.active ul{
+        transform: translateX(0%);
+    }
+    .humbergr-menu.active img{
+        display: none;
+    }
+    .humbergr-menu.active{
+        display: flex;
+        align-items: center;
+    }
+    .humbergr-menu.active .close-icon{
+        display: block;
+        height: 3rem;
+        cursor: pointer;
         position: absolute;
-        top: 15px;
-        left: 15px;
-        background-color: hsl(0, 0%, 100%);
-        width: 95%;
-        border-radius: 5px;
-        box-shadow: hsl(0, 0%, 0%, .1) 10px 10px ;
+        right: 5%;
     }
-    .logo-links ul li.active .sub-menu-1{
-        margin-top: 10px;
-    }
-
 }
 
 
 
+/* make the text  responsive */
 
-
-
-.sec-1{
-    background-color: white;
-    height: 100vh;
-    z-index: 2;
+@media screen and (max-width: 600px){
+    .nav-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-content h1{
+        font-size: 2.3rem;
+        text-align: center;
+    }
+    .nav-content h4{
+        text-align: center;
+    }
 }
