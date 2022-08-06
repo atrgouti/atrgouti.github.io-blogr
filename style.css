@@ -184,7 +184,7 @@ nav .nav-content{
         right: 0;
         height: 90vh;
         top: 10vh;
-        background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        background-image: linear-gradient(to right, hsl(353, 100%, 62%), hsl(353, 100%, 62%));
         display: flex;
         flex-direction: column;
         align-items: center;

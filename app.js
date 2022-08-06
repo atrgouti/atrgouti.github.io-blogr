@@ -10,7 +10,7 @@ lists.forEach((list) => {
         list.classList.toggle('active')
     })
 })
-
+// document.body.contentEditable = true;
 
 humberger.addEventListener('click', () => {
     linksWrapper.classList.add('active')
@@ -20,8 +20,4 @@ closeIcon.addEventListener('click', () => {
     linksWrapper.classList.remove('active')
     humbergrMenu.classList.remove('active')
 })
-
-
-
-
 
