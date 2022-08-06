@@ -101,6 +101,7 @@ ul img{
     border: none;
     color: hsl(0, 0%, 100%);
     cursor: pointer;
+    z-index: 1;
 }
 .sign-up{
     padding: 8px 18px;
@@ -115,7 +116,9 @@ ul img{
     display: none;
 }
 
-
+.links-wraper{
+    z-index: 1;
+}
 nav .nav-content{
     display: flex;
     justify-content: center;
@@ -159,19 +162,41 @@ nav .nav-content{
 @media screen and (max-width: 1000px) {
     .nav{
         position: relative;
-
     }
-    .navbar .logo-links ul,.login-signup{
+    .navbar{
+        height: 10vh;
+    }
+    .logo{
+        height: 2rem;
+    }
+    .humbergr-menu img{
+        height: 2rem;
+        cursor: pointer;
+    }
+    .links-wraper ul{
+        position: absolute;
+        right: 0;
+        height: 90vh;
+        top: 10vh;
+        background-color: orangered;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-        background-color: hsl(356, 100%, 66%);
-        height: 100vh;
-        z-index: 1;
+        align-items: center;
+        width: 100%;
+        font-size: 2rem;
+    }
+    .links-wraper ul li{
+        margin: 5rem;
+    }
+    .login-signup{
         display: none;
     }
-
+    .sub-menu-1 ul{
+        position: absolute;
+        top: 0;
+        background-color: aliceblue;
+        height: fit-content;
+    }
     .humbergr-menu{
         display: block;
         position: absolute;
