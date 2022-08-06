@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');;
+:root{
+   --Light-red: hsl(356, 100%, 66%);
+   --Very-light-red: hsl(355, 100%, 74%);
+   --dark-blue: hsl(208, 49%, 24%);
+   --White: hsl(0, 0%, 100%);
+   --Grayish: hsl(240, 2%, 79%);
+   --Very-dark-grayish-blue: hsl(207, 13%, 34%);
+   --Very-dark-black-blue: hsl(240, 10%, 16%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Overpass;
+    overflow-x: hidden;
+}
+nav{
+    background-image: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    height: 100vh;
+    width: 100%;
+    font-family: Roboto;
+    border-bottom-left-radius: 20%;
+}
+.navbar{
+    height: 16vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.logo-links{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    z-index: 1;
+}
+.logo-links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-links ul li{
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+ul img{
+    height: 10px;
+    position: relative;
+    right: 6.4%;
+    cursor: pointer;
+}
+.login{
+    padding: 5px 10px;
+    background-color: Transparent;
+    border: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+}
+.sign-up{
+    padding: 8px 18px;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: hsl(356, 100%, 66%);
+    margin-left: 10px;
+}
+.login-signup{
+    z-index: 1;
+}
+.big-pattern{
+height: 90rem;
+position: relative;
+left: 30%;
+bottom: 100%;
+z-index: 1;
+}
+
+
+.sec-1{
+    background-color: white;
+    height: 100vh;
+    z-index: 2;
+}
