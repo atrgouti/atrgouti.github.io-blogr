@@ -33,9 +33,14 @@ nav{
 }
 .logo-links{
     display: flex;
-    width: 30%;
+    width: 40%;
     justify-content: space-around;
     z-index: 1;
+    align-items: center;
+}
+.logo-links .logo{
+    position: absolute;
+    left: 6%;
 }
 .logo-links ul{
     display: flex;
@@ -48,11 +53,24 @@ nav{
     justify-content: space-around;
     color: hsl(0, 0%, 100%);
     cursor: pointer;
+    position: relative;
 }
+.logo-links ul li::before{
+    content: '';
+    height: 6rem;
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    border-radius: 5px;
+    
+}
+
 ul img{
     height: 10px;
     position: relative;
-    right: 6.4%;
+    right: 2%;
     cursor: pointer;
 }
 .login{
@@ -84,11 +102,33 @@ nav .nav-content{
 .nav-content h1{
     font-size: 3rem;
     margin: 1rem;
+    color: hsl(0, 0%, 100%);
 }
 .nav-content h4{
     margin: 1rem;
+    color: hsl(0, 0%, 100%);
 }
-
+.nav-content .buttons{
+    margin-top: 1rem;
+}
+.nav-content .buttons .start{
+    padding: 8px 18px;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: hsl(356, 100%, 66%);
+    margin-left: 10px;
+}
+.nav-content .buttons .learn{
+    padding: 8px 18px;
+    background-color: transparent;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 20px;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    margin-left: 10px;
+}
 .sec-1{
     background-color: white;
     height: 100vh;
