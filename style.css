@@ -35,7 +35,6 @@ nav{
     display: flex;
     width: 40%;
     justify-content: space-around;
-    z-index: 1;
     align-items: center;
 }
 .logo-links .logo{
@@ -55,23 +54,46 @@ nav{
     cursor: pointer;
     position: relative;
 }
-.logo-links ul li::before{
-    content: '';
-    height: 6rem;
-    width: 100%;
-    background-color: hsl(0, 0%, 100%);
-    position: absolute;
-    left: 0;
-    top: 2rem;
-    border-radius: 5px;
-    
+.sub-menu-1 {
+    display: none;
 }
-
+.logo-links ul li.active .sub-menu-1 {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: hsl(0, 0%, 100%);
+    width: 95%;
+    border-radius: 5px;
+    box-shadow: hsl(0, 0%, 0%, .1) 10px 10px ;
+}
+.logo-links ul li.active .sub-menu-1{
+    margin-top: 1rem;
+}
+.logo-links ul li.active .sub-menu-1 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.logo-links ul li.active .sub-menu-1 ul li{
+    padding: 10px;
+}
+.logo-links ul li.active .sub-menu-1 ul li a:hover{
+    color: black;
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: rgb(61, 61, 61);
+}
 ul img{
     height: 10px;
-    position: relative;
-    right: 2%;
+    position: absolute;
     cursor: pointer;
+    right: 10px;
+    top: 5px;
 }
 .login{
     padding: 5px 10px;
@@ -89,9 +111,11 @@ ul img{
     color: hsl(356, 100%, 66%);
     margin-left: 10px;
 }
-.login-signup{
-    z-index: 1;
+.humbergr-menu{
+    display: none;
 }
+
+
 nav .nav-content{
     display: flex;
     justify-content: center;
@@ -129,6 +153,37 @@ nav .nav-content{
     color: hsl(0, 0%, 100%);
     margin-left: 10px;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+    .nav{
+        position: relative;
+
+    }
+    .navbar .logo-links ul,.login-signup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: hsl(356, 100%, 66%);
+        height: 100vh;
+        z-index: 1;
+        display: none;
+    }
+
+    .humbergr-menu{
+        display: block;
+        position: absolute;
+        right: 5%;
+    }
+}
+
+
+
+
+
+
 .sec-1{
     background-color: white;
     height: 100vh;
